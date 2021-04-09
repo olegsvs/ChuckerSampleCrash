@@ -53,6 +53,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             install(Logging) {
+                logger = Logger.DEFAULT
                 level = LogLevel.ALL
             }
 
@@ -69,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                         append("file", "123")
                     })
                 }
-                println(resp)
+                //println(resp)
                 withContext(Dispatchers.Main){
                     tvStatus?.text = resp
                 }
@@ -93,6 +94,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             install(Logging) {
+                logger = Logger.DEFAULT
                 level = LogLevel.ALL
             }
 
@@ -109,7 +111,7 @@ class MainActivity : AppCompatActivity() {
                         append("file", "123")
                     })
                 }
-                println(resp)
+                //println(resp)
                 withContext(Dispatchers.Main){
                     tvStatus?.text = resp
                 }

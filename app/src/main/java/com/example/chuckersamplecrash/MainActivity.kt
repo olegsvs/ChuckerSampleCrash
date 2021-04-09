@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         tvStatus = findViewById(R.id.status)
-        tvStatus = findViewById(R.id.status)
         btnSendWithChucker = findViewById(R.id.btn_upload_with_chucker)
         btnSendWithoutChucker = findViewById(R.id.btn_upload_without_chucker)
 
@@ -38,11 +37,11 @@ class MainActivity : AppCompatActivity() {
             uploadWithChucker(this)
         }
         btnSendWithoutChucker?.setOnClickListener {
-            uploadWithoutChucker(this)
+            uploadWithoutChucker()
         }
     }
 
-    private fun uploadWithoutChucker(context: Context) {
+    private fun uploadWithoutChucker() {
         val client = HttpClient(OkHttp) {
             developmentMode = true
 
